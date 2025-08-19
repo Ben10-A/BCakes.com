@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - BCakes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../B.png" type="image/logo">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../main.js" defer></script>
+  
+</head>
+<body>
+ <script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Gather form values
+  const name = this.name.value;
+  const email = this.email.value;
+  const phone = this.phone.value;
+  const eventType = this.eventType.value;
+  const eventDate = this.eventDate.value;
+  const message = this.message.value;
+
+  // WhatsApp message
+  let whatsappMsg =
+    `Hello!%0A%0AMy name is ${name}.%0AEmail: ${email}%0APhone: ${phone}%0AEvent Type: ${eventType}%0AEvent Date: ${eventDate}%0A%0AMessage:%0A${message}`;
+
+  // WhatsApp number (no +, no spaces)
+  const whatsappNumber = "+254735249622"; // Correct format
+
+  // Open WhatsApp chat with pre-filled message
+  window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`, "_blank");
+});
+</script>
+  
+</body>
+</html>

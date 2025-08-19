@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BCakes</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="icon" href="B.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="navbar" role="banner">
+    <div class="navbar-left">
+      <a href="#" class="logo-link" id="logo-home" aria-label="BCakes home">
+        <img src="B.png" alt="BCakes logo" class="logo" width="40" height="40" decoding="async" />
+        <span class="brand-name">BCakes</span>
+      </a>
+    </div>
+
+    <!-- Desktop nav (will be hidden on small screens) -->
+    <ul class="nav-links" id="primary-nav" role="navigation" aria-label="Primary navigation" aria-hidden="true">
+      <li><a href="#" class="nav-item active" data-page="home">Home</a></li>
+      <li><a href="#" class="nav-item" data-page="about">About</a></li>
+      <li><a href="#" class="nav-item" data-page="services">Services</a></li>
+      <li><a href="#" class="nav-item" data-page="gallery">Gallery</a></li>
+      <li><a href="#" class="nav-item" data-page="contact">Contact</a></li>
+    </ul>
+
+    <!-- menu toggle for mobile -->
+    <button id="menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-bar" aria-hidden="true"></span>
+    </button>
+
+    <a
+      href="https://wa.me/254735249622"
+      class="whatsapp-nav"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Chat with us on WhatsApp"
+      aria-label="Chat with BCakes on WhatsApp"
+    >
+      <img src="WhatsApp.png" alt="" class="whatsapp-nav-icon" width="20" height="20" />
+      <span class="whatsapp-text">WhatsApp</span>
+    </a>
+  </header>
+
+  <!-- Main content (injected via JS SPA) -->
+  <main id="main-content" role="main"></main>
+
+  <!-- Floating WhatsApp button -->
+  <a
+    href="https://wa.me/254735249622"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    title="Chat with us on WhatsApp"
+  >
+    <img src="WhatsApp.png" alt="WhatsApp" width="60" height="60" />
+  </a>
+
+  <!-- Popup Modal for Gallery -->
+  <div class="popup-overlay" id="popup" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="popup-content" role="document">
+      <button class="popup-close" id="popup-close" aria-label="Close">Close</button>
+      <div id="popup-images" class="popup-images" tabindex="0"></div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <small>Copyright &copy; 2025 BCakes | <a href="#" rel="noopener">terms</a> | <a href="#" rel="noopener">privacy</a></small>
+  </footer>
+</body>
+</html>
